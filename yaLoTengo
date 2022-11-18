@@ -1,0 +1,51 @@
+package ejercicioproblema;
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class EjercicioProblema {
+    public static void main(String[] args) {
+        
+        String ingresoPalabra = "";
+        String ingresoLetra = "";
+        Scanner ingreso =  new Scanner (System.in);
+        System.out.println("Ingrese una palabra"); 
+        ingresoPalabra = ingreso.next();
+        char[] caracteresPalabras  = new char [ingresoPalabra.length()];
+        String[] parseoCaracteres  = new String [ingresoPalabra.length()];
+        char[] mirrorcaracteresPalabras  =  new char [ingresoPalabra.length()];
+        String[] mirrorParseoPalabras  = new String [ingresoPalabra.length()];
+        for (int i = 0; i < ingresoPalabra.length(); i++) {
+            caracteresPalabras [i]= ingresoPalabra.charAt (i);
+            parseoCaracteres[i] = String.valueOf(caracteresPalabras [i]);
+            mirrorParseoPalabras[i] = "_";
+        }
+        System.out.println("Ingrese la letra a adivinar");
+            for (int i = 0; i < ingresoPalabra.length(); i++) {
+                    ingresoLetra = ingreso.next();
+                    for (int j = 0; j < ingresoPalabra.length(); j++) {
+                        if (j==ingresoPalabra.length()) {
+                           System.out.println("Letra no encontrada");
+                            for (int h = 0; h < ingresoPalabra.length(); h++) {
+                            System.out.print(mirrorParseoPalabras[h]+" , ");  
+                            } 
+                        } else {
+                        }
+                    }
+                i=0;  
+            }
+
+    }
+    
+}
+if (ingresoLetra.equals(parseoCaracteres[i] )) {
+                    mirrorParseoPalabras[i]= ingresoLetra;
+                    System.out.println("Ingrese la "+(i+1)+" a adivinar");
+                    for (int j = 0; j < ingresoPalabra.length(); j++) {
+                        System.out.print(mirrorParseoPalabras[j]+" , ");  
+                    }
+                } else {
+                    System.out.println("Letra no encontrada");
+                    for (int j = 0; j < ingresoPalabra.length(); j++) {
+                        System.out.print(mirrorParseoPalabras[j]+" , ");  
+                    }
+                }
