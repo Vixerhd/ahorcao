@@ -31,12 +31,11 @@ public class EjercicioProblema {
                           System.out.print(mirrorParseoPalabras[k]);
                           //Falta crear una variable para juntar todas las letras encontras y despues 
                           //compararlas en el if de abajo si las letras encontradas son iguales a la la palabra
+                          //tengo que crear 2 for uno para la palabra ingresada en arreglo y el otro para el arreglo del mirror de las letras ingresadas
+                          //y despues hacer una comparacaion de un arreglo con la palabra ingresada y con la letra ingresada dentro de los 2 for
                         }
-                         System.out.println("");
+                        System.out.println("");
                     }   
-                }
-                if (mirrorParseoPalabras[k].equals(ingresoPalabra)) {
-                    
                 }
             }
 
