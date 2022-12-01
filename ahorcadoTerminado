@@ -7,11 +7,16 @@ public class JuegoAhorcado {
         Scanner ingreso =  new Scanner (System.in );
         String palabraIngresada ;
         String letraIngreso ;
+        int cantidadDeIntentos = 0 ;
         System.out.println("<==============================>\n"
         +"BIENVENIDO AL JUEGO DEL AHORCADO\n"
         +"<==============================>");
+        System.out.println("Ingrese la cantidad de intentos que desea poner");
+        cantidadDeIntentos = ingreso.nextInt();
         System.out.println("Ingrese la palabra");
         palabraIngresada = ingreso.next();
+        palabraIngresada=palabraIngresada.replace(" ", "");
+        palabraIngresada=palabraIngresada.toLowerCase();
         for (int i = 0; i < 30; i++) {
             System.out.println("");
         }
@@ -29,7 +34,7 @@ public class JuegoAhorcado {
             palabraIngresadaStr [i]=String.valueOf(palabraIngresadaChar [i]);
         }
         System.out.println("Ingrese la letra a adivinar");
-            for (int h = 0; h < 5; h++) {
+            for (int h = 0; h < cantidadDeIntentos; h++) {
                 letraIngreso = ingreso.next();
                 validacion=0;
                 for (int i = 0; i < palabraIngresada.length(); i++) {
@@ -56,3 +61,4 @@ public class JuegoAhorcado {
     }
     
 }
+
