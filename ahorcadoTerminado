@@ -7,8 +7,14 @@ public class JuegoAhorcado {
         Scanner ingreso =  new Scanner (System.in );
         String palabraIngresada ;
         String letraIngreso ;
+        System.out.println("<==============================>\n"
+        +"BIENVENIDO AL JUEGO DEL AHORCADO\n"
+        +"<==============================>");
         System.out.println("Ingrese la palabra");
         palabraIngresada = ingreso.next();
+        for (int i = 0; i < 30; i++) {
+            System.out.println("");
+        }
         char palabraIngresadaChar [] = new char [palabraIngresada.length()];
         String palabraIngresadaStr  [] = new String [palabraIngresada.length()];
         String muestraPorPantallaStr  [] = new String [palabraIngresada.length()];
@@ -25,27 +31,28 @@ public class JuegoAhorcado {
         System.out.println("Ingrese la letra a adivinar");
             for (int h = 0; h < 5; h++) {
                 letraIngreso = ingreso.next();
+                validacion=0;
                 for (int i = 0; i < palabraIngresada.length(); i++) {
                     if (letraIngreso.equals(palabraIngresadaStr [i])) {
                         muestraPorPantallaStr[i]=letraIngreso;
                         h=0;
                         contadorMuestraPorPantalla=contadorMuestraPorPantalla+1;
-
+                        validacion=1;
                         for (int j = 0; j < palabraIngresada.length() ; j++) {
                             System.out.print(muestraPorPantallaStr[j]);
                         }
                         System.out.println("");
-                    }else{
-                        if (i==(contador-1)) {
-                           System.out.println("Letra ingresada no valida");
-                        }
                     }
+                }
+                if (validacion==0) {
+                    System.out.println("Letra no encontrada");
+                }
+
                 if (contadorMuestraPorPantalla==palabraIngresada.length()) {
                     System.out.println("Letras acertada");
                     h=5;
                 }
             }
-        }
     }
     
 }
