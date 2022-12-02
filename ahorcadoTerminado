@@ -1,11 +1,16 @@
-package juegoahorcado;
+package juegoahorcao;
 
 import java.util.Scanner;
 
-public class JuegoAhorcado {
+public class JuegoAhorcao {
     public static void main(String[] args) {
         Scanner ingreso =  new Scanner (System.in );
+        
         String palabraIngresada ;
+        String palabraAyudaEspacios;
+        String quitadorDeEspacios = " ";
+        String quitadorDeEspacios2 = "";
+        String palabraIngresada2 = "";
         String letraIngreso ;
         int cantidadDeIntentos = 0 ;
         System.out.println("<==============================>\n"
@@ -15,21 +20,21 @@ public class JuegoAhorcado {
         cantidadDeIntentos = ingreso.nextInt();
         System.out.println("Ingrese la palabra");
         palabraIngresada = ingreso.next();
-        palabraIngresada=palabraIngresada.replace(" ", "");
-        palabraIngresada=palabraIngresada.toLowerCase();
+        palabraIngresada2=palabraIngresada2.toLowerCase();
+        System.out.println(palabraIngresada2);
         for (int i = 0; i < 30; i++) {
             System.out.println("");
         }
-        char palabraIngresadaChar [] = new char [palabraIngresada.length()];
-        String palabraIngresadaStr  [] = new String [palabraIngresada.length()];
-        String muestraPorPantallaStr  [] = new String [palabraIngresada.length()];
+        char palabraIngresadaChar [] = new char [palabraIngresada2.length()];
+        String palabraIngresadaStr  [] = new String [palabraIngresada2.length()];
+        String muestraPorPantallaStr  [] = new String [palabraIngresada2.length()];
         String comparacionDeLetras;
         int contador;
         int contadorMuestraPorPantalla=0;
         int validacion;
-        contador=palabraIngresada.length();
-        for (int i = 0; i < palabraIngresada.length(); i++) {
-            palabraIngresadaChar[i]=palabraIngresada.charAt(i);
+        contador=palabraIngresada2.length();
+        for (int i = 0; i < palabraIngresada2.length(); i++) {
+            palabraIngresadaChar[i]=palabraIngresada2.charAt(i);
             muestraPorPantallaStr [i]="_,";
             palabraIngresadaStr [i]=String.valueOf(palabraIngresadaChar [i]);
         }
@@ -61,4 +66,3 @@ public class JuegoAhorcado {
     }
     
 }
-
